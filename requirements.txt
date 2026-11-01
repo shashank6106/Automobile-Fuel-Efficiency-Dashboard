@@ -1,0 +1,11 @@
+pyspark>=3.5
+pandas
+numpy
+streamlit
+plotly
+scikit-learn
+requests
+matplotlib
+seaborn
+reportlab
+python-pptx

@@ -1,0 +1,557 @@
+{
+  "models": {
+    "Linear Regression": {
+      "RMSE": 3.1912514441135444,
+      "MAE": 2.7197134823193743,
+      "R2": 0.8217508260712589
+    },
+    "Random Forest": {
+      "RMSE": 2.7617431291678622,
+      "MAE": 2.0330789151630277,
+      "R2": 0.8665028354117374
+    }
+  },
+  "details": {
+    "Linear Regression": {
+      "type": "LinearRegression",
+      "intercept": -17.80047591696084,
+      "coefficients": {
+        "cylinders": -0.3268415627554608,
+        "displacement": 0.02026080876944241,
+        "horsepower": -0.02036311565396648,
+        "weight": -0.006869773082587668,
+        "acceleration": 0.08660012192059345,
+        "model_year": 0.7843604162663316,
+        "origin_index": 1.423561139954543
+      },
+      "sample_predictions": [
+        {
+          "mpg": 10.0,
+          "prediction": 6.9142409417813795,
+          "car_name": "ford f250"
+        },
+        {
+          "mpg": 11.0,
+          "prediction": 9.640043107734975,
+          "car_name": "mercury marquis"
+        },
+        {
+          "mpg": 12.0,
+          "prediction": 10.44441664547406,
+          "car_name": "oldsmobile vista cruiser"
+        },
+        {
+          "mpg": 13.0,
+          "prediction": 21.17263569430708,
+          "car_name": "ford mustang ii"
+        },
+        {
+          "mpg": 13.0,
+          "prediction": 14.710879799525483,
+          "car_name": "chevrolet malibu"
+        },
+        {
+          "mpg": 13.0,
+          "prediction": 11.467901846639148,
+          "car_name": "chevrolet impala"
+        },
+        {
+          "mpg": 13.0,
+          "prediction": 8.352233395593728,
+          "car_name": "ford country squire (sw)"
+        },
+        {
+          "mpg": 14.0,
+          "prediction": 15.718015129078122,
+          "car_name": "amc matador"
+        },
+        {
+          "mpg": 14.0,
+          "prediction": 11.90243257978127,
+          "car_name": "ford galaxie 500"
+        },
+        {
+          "mpg": 14.0,
+          "prediction": 11.514766316404373,
+          "car_name": "pontiac catalina"
+        },
+        {
+          "mpg": 14.0,
+          "prediction": 10.14439376565332,
+          "car_name": "pontiac catalina brougham"
+        },
+        {
+          "mpg": 14.0,
+          "prediction": 10.076951552791549,
+          "car_name": "chevrolet impala"
+        },
+        {
+          "mpg": 14.0,
+          "prediction": 9.594243016348027,
+          "car_name": "pontiac catalina"
+        },
+        {
+          "mpg": 15.0,
+          "prediction": 19.864675206316516,
+          "car_name": "chevrolet nova"
+        },
+        {
+          "mpg": 15.0,
+          "prediction": 14.065121129762243,
+          "car_name": "chevrolet monte carlo s"
+        },
+        {
+          "mpg": 15.5,
+          "prediction": 16.897595946155104,
+          "car_name": "amc matador"
+        },
+        {
+          "mpg": 16.0,
+          "prediction": 16.823177527862224,
+          "car_name": "chevroelt chevelle malibu"
+        },
+        {
+          "mpg": 17.5,
+          "prediction": 22.748955735621063,
+          "car_name": "amc pacer d/l"
+        },
+        {
+          "mpg": 18.0,
+          "prediction": 19.905680144340348,
+          "car_name": "plymouth valiant"
+        },
+        {
+          "mpg": 18.0,
+          "prediction": 17.346748324750873,
+          "car_name": "amc matador"
+        },
+        {
+          "mpg": 18.0,
+          "prediction": 20.59277907726295,
+          "car_name": "ford granada ghia"
+        },
+        {
+          "mpg": 18.0,
+          "prediction": 21.445350637952604,
+          "car_name": "ford maverick"
+        },
+        {
+          "mpg": 18.5,
+          "prediction": 19.847583914512267,
+          "car_name": "chrysler lebaron town @ country (sw)"
+        },
+        {
+          "mpg": 19.0,
+          "prediction": 23.72207526482816,
+          "car_name": "mazda rx2 coupe"
+        },
+        {
+          "mpg": 20.0,
+          "prediction": 24.92892678222105,
+          "car_name": "audi 100ls"
+        },
+        {
+          "mpg": 20.2,
+          "prediction": 24.739288835054534,
+          "car_name": "ford fairmont (auto)"
+        },
+        {
+          "mpg": 20.3,
+          "prediction": 27.084800169197553,
+          "car_name": "audi 5000"
+        },
+        {
+          "mpg": 20.6,
+          "prediction": 22.876811309122115,
+          "car_name": "dodge aspen 6"
+        },
+        {
+          "mpg": 21.0,
+          "prediction": 22.09658443796319,
+          "car_name": "peugeot 504 (sw)"
+        },
+        {
+          "mpg": 22.0,
+          "prediction": 24.933775683254726,
+          "car_name": "datsun 610"
+        },
+        {
+          "mpg": 22.0,
+          "prediction": 19.101082741170725,
+          "car_name": "plymouth duster"
+        },
+        {
+          "mpg": 23.0,
+          "prediction": 20.809885177921128,
+          "car_name": "cadillac eldorado"
+        },
+        {
+          "mpg": 24.0,
+          "prediction": 28.93901026251167,
+          "car_name": "fiat 128"
+        },
+        {
+          "mpg": 24.0,
+          "prediction": 24.509814241047362,
+          "car_name": "toyota corona"
+        },
+        {
+          "mpg": 24.5,
+          "prediction": 28.31499553215129,
+          "car_name": "chevrolet woody"
+        },
+        {
+          "mpg": 25.5,
+          "prediction": 24.754162902860127,
+          "car_name": "ford mustang ii 2+2"
+        },
+        {
+          "mpg": 26.0,
+          "prediction": 24.36868623954793,
+          "car_name": "ford pinto"
+        },
+        {
+          "mpg": 26.6,
+          "prediction": 29.09262188572202,
+          "car_name": "buick skylark"
+        },
+        {
+          "mpg": 27.0,
+          "prediction": 29.218619661259364,
+          "car_name": "volkswagen model 111"
+        },
+        {
+          "mpg": 27.0,
+          "prediction": 24.017377485638807,
+          "car_name": "datsun pl510"
+        },
+        {
+          "mpg": 27.0,
+          "prediction": 29.16152970017661,
+          "car_name": "chevrolet cavalier wagon"
+        },
+        {
+          "mpg": 27.0,
+          "prediction": 29.206386494878746,
+          "car_name": "pontiac phoenix"
+        },
+        {
+          "mpg": 28.8,
+          "prediction": 26.51782943684169,
+          "car_name": "chevrolet citation"
+        },
+        {
+          "mpg": 29.0,
+          "prediction": 30.870017271289438,
+          "car_name": "volkswagen rabbit"
+        },
+        {
+          "mpg": 29.0,
+          "prediction": 31.67169771193988,
+          "car_name": "vw rabbit"
+        },
+        {
+          "mpg": 29.0,
+          "prediction": 30.27384435199369,
+          "car_name": "dodge aries se"
+        },
+        {
+          "mpg": 29.5,
+          "prediction": 30.867295328238537,
+          "car_name": "honda accord lx"
+        },
+        {
+          "mpg": 30.5,
+          "prediction": 29.372890337993102,
+          "car_name": "chevrolet chevette"
+        },
+        {
+          "mpg": 30.9,
+          "prediction": 28.608529341213252,
+          "car_name": "dodge omni"
+        },
+        {
+          "mpg": 31.6,
+          "prediction": 30.25626934201264,
+          "car_name": "mazda 626"
+        }
+      ]
+    },
+    "Random Forest": {
+      "type": "RandomForest",
+      "feature_importances": {
+        "cylinders": 0.22460843819574308,
+        "displacement": 0.30087177870315757,
+        "horsepower": 0.15861056087711295,
+        "weight": 0.17103762035336895,
+        "acceleration": 0.020548264117732997,
+        "model_year": 0.11050581067124816,
+        "origin_index": 0.01381752708163645
+      },
+      "sample_predictions": [
+        {
+          "mpg": 10.0,
+          "prediction": 12.464832013228307,
+          "car_name": "ford f250"
+        },
+        {
+          "mpg": 11.0,
+          "prediction": 12.999497932691959,
+          "car_name": "mercury marquis"
+        },
+        {
+          "mpg": 12.0,
+          "prediction": 13.140132656091364,
+          "car_name": "oldsmobile vista cruiser"
+        },
+        {
+          "mpg": 13.0,
+          "prediction": 17.761712567571706,
+          "car_name": "ford mustang ii"
+        },
+        {
+          "mpg": 13.0,
+          "prediction": 14.489218939067499,
+          "car_name": "chevrolet malibu"
+        },
+        {
+          "mpg": 13.0,
+          "prediction": 14.042966383819865,
+          "car_name": "chevrolet impala"
+        },
+        {
+          "mpg": 13.0,
+          "prediction": 13.15270532093371,
+          "car_name": "ford country squire (sw)"
+        },
+        {
+          "mpg": 14.0,
+          "prediction": 15.217619797177477,
+          "car_name": "amc matador"
+        },
+        {
+          "mpg": 14.0,
+          "prediction": 14.004586457755675,
+          "car_name": "ford galaxie 500"
+        },
+        {
+          "mpg": 14.0,
+          "prediction": 13.195429287304236,
+          "car_name": "pontiac catalina"
+        },
+        {
+          "mpg": 14.0,
+          "prediction": 13.201218760988446,
+          "car_name": "pontiac catalina brougham"
+        },
+        {
+          "mpg": 14.0,
+          "prediction": 13.517320467448737,
+          "car_name": "chevrolet impala"
+        },
+        {
+          "mpg": 14.0,
+          "prediction": 13.034191261362439,
+          "car_name": "pontiac catalina"
+        },
+        {
+          "mpg": 15.0,
+          "prediction": 18.347365965543265,
+          "car_name": "chevrolet nova"
+        },
+        {
+          "mpg": 15.0,
+          "prediction": 14.33076083735476,
+          "car_name": "chevrolet monte carlo s"
+        },
+        {
+          "mpg": 15.5,
+          "prediction": 17.627336901781263,
+          "car_name": "amc matador"
+        },
+        {
+          "mpg": 16.0,
+          "prediction": 17.259099622641784,
+          "car_name": "chevroelt chevelle malibu"
+        },
+        {
+          "mpg": 17.5,
+          "prediction": 19.958770845573884,
+          "car_name": "amc pacer d/l"
+        },
+        {
+          "mpg": 18.0,
+          "prediction": 19.371327286695067,
+          "car_name": "plymouth valiant"
+        },
+        {
+          "mpg": 18.0,
+          "prediction": 18.672462396165905,
+          "car_name": "amc matador"
+        },
+        {
+          "mpg": 18.0,
+          "prediction": 19.13398096269541,
+          "car_name": "ford granada ghia"
+        },
+        {
+          "mpg": 18.0,
+          "prediction": 20.59731827221205,
+          "car_name": "ford maverick"
+        },
+        {
+          "mpg": 18.5,
+          "prediction": 15.84338925050347,
+          "car_name": "chrysler lebaron town @ country (sw)"
+        },
+        {
+          "mpg": 19.0,
+          "prediction": 23.20095786439523,
+          "car_name": "mazda rx2 coupe"
+        },
+        {
+          "mpg": 20.0,
+          "prediction": 24.748272755767985,
+          "car_name": "audi 100ls"
+        },
+        {
+          "mpg": 20.2,
+          "prediction": 20.97364105393714,
+          "car_name": "ford fairmont (auto)"
+        },
+        {
+          "mpg": 20.3,
+          "prediction": 22.630254080775117,
+          "car_name": "audi 5000"
+        },
+        {
+          "mpg": 20.6,
+          "prediction": 20.125586463647927,
+          "car_name": "dodge aspen 6"
+        },
+        {
+          "mpg": 21.0,
+          "prediction": 21.751220309396153,
+          "car_name": "peugeot 504 (sw)"
+        },
+        {
+          "mpg": 22.0,
+          "prediction": 24.88813589552176,
+          "car_name": "datsun 610"
+        },
+        {
+          "mpg": 22.0,
+          "prediction": 19.946208933633496,
+          "car_name": "plymouth duster"
+        },
+        {
+          "mpg": 23.0,
+          "prediction": 16.92518927344664,
+          "car_name": "cadillac eldorado"
+        },
+        {
+          "mpg": 24.0,
+          "prediction": 28.765617663127145,
+          "car_name": "fiat 128"
+        },
+        {
+          "mpg": 24.0,
+          "prediction": 24.245733353393593,
+          "car_name": "toyota corona"
+        },
+        {
+          "mpg": 24.5,
+          "prediction": 29.328114065307695,
+          "car_name": "chevrolet woody"
+        },
+        {
+          "mpg": 25.5,
+          "prediction": 24.208491310709302,
+          "car_name": "ford mustang ii 2+2"
+        },
+        {
+          "mpg": 26.0,
+          "prediction": 24.393057301605296,
+          "car_name": "ford pinto"
+        },
+        {
+          "mpg": 26.6,
+          "prediction": 28.059720098140016,
+          "car_name": "buick skylark"
+        },
+        {
+          "mpg": 27.0,
+          "prediction": 29.0763395094447,
+          "car_name": "volkswagen model 111"
+        },
+        {
+          "mpg": 27.0,
+          "prediction": 27.40261749796738,
+          "car_name": "datsun pl510"
+        },
+        {
+          "mpg": 27.0,
+          "prediction": 29.05674977708163,
+          "car_name": "chevrolet cavalier wagon"
+        },
+        {
+          "mpg": 27.0,
+          "prediction": 27.21239458128706,
+          "car_name": "pontiac phoenix"
+        },
+        {
+          "mpg": 28.8,
+          "prediction": 23.440177289940326,
+          "car_name": "chevrolet citation"
+        },
+        {
+          "mpg": 29.0,
+          "prediction": 29.473422485799585,
+          "car_name": "volkswagen rabbit"
+        },
+        {
+          "mpg": 29.0,
+          "prediction": 29.53383915246625,
+          "car_name": "vw rabbit"
+        },
+        {
+          "mpg": 29.0,
+          "prediction": 29.74722534496365,
+          "car_name": "dodge aries se"
+        },
+        {
+          "mpg": 29.5,
+          "prediction": 33.05533073796619,
+          "car_name": "honda accord lx"
+        },
+        {
+          "mpg": 30.5,
+          "prediction": 31.49147350486973,
+          "car_name": "chevrolet chevette"
+        },
+        {
+          "mpg": 30.9,
+          "prediction": 28.822723018693168,
+          "car_name": "dodge omni"
+        },
+        {
+          "mpg": 31.6,
+          "prediction": 30.320955323490498,
+          "car_name": "mazda 626"
+        }
+      ]
+    }
+  },
+  "best_model": "Random Forest",
+  "features": [
+    "cylinders",
+    "displacement",
+    "horsepower",
+    "weight",
+    "acceleration",
+    "model_year",
+    "origin_index"
+  ],
+  "train_rows": 335,
+  "test_rows": 57
+}
