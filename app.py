@@ -19,98 +19,98 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# Custom Styling (Exact User Palette)
-# Background: #101410 | Cards: #202820 | Primary Accent: #14532D | Highlight: #22C55E | Text: #F3F4F6
+# Custom Styling (Background: #293B35 | Cards: #354A42 | Accent: #58C785)
 st.markdown("""
 <style>
-    /* Dark Forest Background */
+    /* Eucalyptus Pine Background */
     .stApp {
-        background-color: #101410;
-        color: #F3F4F6;
+        background-color: #293B35;
+        color: #F1F7F4;
     }
     html, body, [class*="css"] {
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-        color: #F3F4F6;
+        color: #F1F7F4;
     }
     .main-title {
         font-size: 2.05rem;
         font-weight: 700;
-        color: #F3F4F6;
+        color: #F1F7F4;
         letter-spacing: -0.02em;
         margin-bottom: 2px;
     }
     .main-title span {
-        color: #22C55E;
+        color: #58C785;
     }
     .sub-title {
         font-size: 0.95rem;
-        color: #9CA3AF;
+        color: #A5BEB3;
         margin-bottom: 14px;
     }
-    .forest-badge {
+    .accent-badge {
         display: inline-block;
-        background-color: #202820;
-        color: #22C55E;
+        background-color: #354A42;
+        color: #58C785;
         padding: 4px 12px;
         border-radius: 6px;
         font-size: 0.8rem;
         font-weight: 600;
         margin-right: 8px;
-        border: 1px solid #14532D;
+        border: 1px solid #435C53;
+        box-shadow: 0 0 10px rgba(88, 199, 133, 0.08);
     }
-    /* Tabs on Dark Forest Canvas */
+    /* Tabs on Eucalyptus Canvas */
     .stTabs [data-baseweb="tab-list"] {
         gap: 6px;
-        border-bottom: 1px solid #202820;
+        border-bottom: 1px solid #435C53;
         background-color: transparent;
     }
     .stTabs [data-baseweb="tab"] {
         padding: 8px 18px;
         font-size: 0.92rem;
         font-weight: 500;
-        color: #9CA3AF;
+        color: #A5BEB3;
         border-radius: 4px 4px 0 0;
         background-color: transparent;
     }
     .stTabs [aria-selected="true"] {
-        color: #22C55E !important;
+        color: #58C785 !important;
         font-weight: 600;
-        border-bottom: 2px solid #22C55E !important;
+        border-bottom: 2px solid #58C785 !important;
         background-color: transparent !important;
     }
-    /* Metric styling with Highlight color */
+    /* Metric styling with Accent color */
     div[data-testid="stMetricValue"] {
         font-size: 1.6rem;
         font-weight: 700;
-        color: #22C55E;
+        color: #58C785;
     }
     div[data-testid="stMetricLabel"] {
         font-size: 0.82rem;
-        color: #9CA3AF;
+        color: #A5BEB3;
         font-weight: 500;
     }
     /* Cards and Form containers */
     div[data-testid="stForm"] {
-        background-color: #202820;
-        border: 1px solid #2E3A2E;
+        background-color: #354A42;
+        border: 1px solid #435C53;
         border-radius: 8px;
         padding: 16px;
     }
     /* Sidebar */
     section[data-testid="stSidebar"] {
-        background-color: #161D16;
-        border-right: 1px solid #202820;
+        background-color: #23322D;
+        border-right: 1px solid #354A42;
     }
     /* Primary buttons */
     button[kind="primary"], .stButton>button {
-        background-color: #22C55E;
-        color: #101410;
+        background-color: #58C785;
+        color: #1A2A25;
         font-weight: 700;
         border: none;
     }
     button[kind="primary"]:hover, .stButton>button:hover {
-        background-color: #16A34A;
-        color: #FFFFFF;
+        background-color: #7EE0A3;
+        color: #1A2A25;
     }
 </style>
 """, unsafe_allow_html=True)
@@ -119,9 +119,9 @@ st.markdown("""
 st.markdown('<h1 class="main-title">Automobile Fuel Efficiency <span>Dashboard</span></h1>', unsafe_allow_html=True)
 st.markdown("""
 <div style="margin-bottom: 18px;">
-    <span class="forest-badge">INT315 – Cluster Computing</span>
-    <span class="forest-badge">Apache Spark MLlib</span>
-    <span class="forest-badge">UCI Auto MPG Dataset</span>
+    <span class="accent-badge">⚡ INT315 – Cluster Computing</span>
+    <span class="accent-badge">🔥 Apache Spark MLlib</span>
+    <span class="accent-badge">📁 UCI Auto MPG Dataset</span>
 </div>
 """, unsafe_allow_html=True)
 
@@ -138,7 +138,7 @@ df["origin_name"] = df["origin"].map(origin_map).fillna(df["origin"].astype(str)
 with open(METRICS_PATH, "r") as f:
     metrics = json.load(f)
 
-# Sidebar (Clean, Simple, Cards: #202820)
+# Sidebar (Clean, Cards: #354A42)
 with st.sidebar:
     st.markdown("### ⚙️ System Specifications")
     st.markdown("""
@@ -178,22 +178,23 @@ def get_spark_and_model():
 spark_session, spark_model, engine_mode = get_spark_and_model()
 
 # User Palette Constants
-CLR_BG = "#101410"
-CLR_CARDS = "#202820"
-CLR_PRIMARY = "#14532D"
-CLR_HIGHLIGHT = "#22C55E"
-CLR_TEXT = "#F3F4F6"
-CLR_MUTED = "#9CA3AF"
-PALETTE_ORIGIN = ["#22C55E", "#16A34A", "#14532D"]
+CLR_BG = "#293B35"
+CLR_CARDS = "#354A42"
+CLR_ACCENT = "#58C785"
+CLR_ACCENT_LIGHT = "#7EE0A3"
+CLR_ACCENT_DARK = "#388A5E"
+CLR_TEXT = "#F1F7F4"
+CLR_MUTED = "#A5BEB3"
+PALETTE_ORIGIN = ["#58C785", "#7EE0A3", "#388A5E"]
 
-def apply_forest_layout(fig, height=300):
+def apply_eucalyptus_layout(fig, height=300):
     fig.update_layout(
         template="plotly_dark",
         plot_bgcolor="rgba(0,0,0,0)",
         paper_bgcolor="rgba(0,0,0,0)",
         font=dict(color=CLR_TEXT),
-        xaxis=dict(gridcolor="#202820", zerolinecolor="#202820"),
-        yaxis=dict(gridcolor="#202820", zerolinecolor="#202820"),
+        xaxis=dict(gridcolor="#354A42", zerolinecolor="#354A42"),
+        yaxis=dict(gridcolor="#354A42", zerolinecolor="#354A42"),
         margin=dict(l=20, r=20, t=30, b=20),
         height=height
     )
@@ -225,22 +226,22 @@ with tab1:
         st.markdown("**Horsepower Distribution**")
         fig_hp = px.histogram(
             df, x="horsepower", nbins=20,
-            color_discrete_sequence=[CLR_HIGHLIGHT],
+            color_discrete_sequence=[CLR_ACCENT],
             labels={"horsepower": "Engine Horsepower (HP)", "count": "Count"}
         )
         fig_hp.update_layout(bargap=0.08)
-        apply_forest_layout(fig_hp, height=300)
+        apply_eucalyptus_layout(fig_hp, height=300)
         st.plotly_chart(fig_hp, use_container_width=True)
 
     with col2:
         st.markdown("**Vehicle Weight Distribution**")
         fig_wt = px.histogram(
             df, x="weight", nbins=20,
-            color_discrete_sequence=["#16A34A"],
+            color_discrete_sequence=[CLR_ACCENT_LIGHT],
             labels={"weight": "Weight (lbs)", "count": "Count"}
         )
         fig_wt.update_layout(bargap=0.08)
-        apply_forest_layout(fig_wt, height=300)
+        apply_eucalyptus_layout(fig_wt, height=300)
         st.plotly_chart(fig_wt, use_container_width=True)
 
     st.markdown("---")
@@ -254,7 +255,7 @@ with tab1:
             hole=0.5,
             color_discrete_sequence=PALETTE_ORIGIN
         )
-        apply_forest_layout(fig_pie, height=300)
+        apply_eucalyptus_layout(fig_pie, height=300)
         st.plotly_chart(fig_pie, use_container_width=True)
 
     with col_cyl:
@@ -284,16 +285,16 @@ with tab2:
             labels={"weight": "Vehicle Weight (lbs)", "mpg": "Fuel Efficiency (MPG)", "origin_name": "Origin"},
             hover_data=["car_name"]
         )
-        # Add regression trendline in Highlight green
+        # Add regression trendline in Accent green
         z = np.polyfit(df["weight"], df["mpg"], 1)
         p = np.poly1d(z)
         x_trend = np.linspace(df["weight"].min(), df["weight"].max(), 50)
         fig_mw.add_trace(go.Scatter(
             x=x_trend, y=p(x_trend),
             mode="lines", name="Linear Trendline",
-            line=dict(color=CLR_HIGHLIGHT, dash="dash", width=2)
+            line=dict(color=CLR_ACCENT, dash="dash", width=2)
         ))
-        apply_forest_layout(fig_mw, height=320)
+        apply_eucalyptus_layout(fig_mw, height=320)
         st.plotly_chart(fig_mw, use_container_width=True)
         st.caption("Insight: Inverse relationship ($r \\approx -0.83$). Heavier vehicles demand substantially more energy.")
 
@@ -305,7 +306,7 @@ with tab2:
             labels={"horsepower": "Engine Horsepower", "mpg": "MPG", "origin_name": "Origin"},
             hover_data=["car_name"]
         )
-        apply_forest_layout(fig_mh, height=320)
+        apply_eucalyptus_layout(fig_mh, height=320)
         st.plotly_chart(fig_mh, use_container_width=True)
         st.caption("Insight: High-horsepower engines exhibit significantly reduced fuel economy.")
 
@@ -315,10 +316,10 @@ with tab2:
         st.markdown("**3. Cylinders vs. MPG**")
         fig_box = px.box(
             df, x="cylinders", y="mpg",
-            color_discrete_sequence=[CLR_HIGHLIGHT],
+            color_discrete_sequence=[CLR_ACCENT],
             labels={"cylinders": "Number of Cylinders", "mpg": "Miles Per Gallon (MPG)"}
         )
-        apply_forest_layout(fig_box, height=320)
+        apply_eucalyptus_layout(fig_box, height=320)
         st.plotly_chart(fig_box, use_container_width=True)
         st.caption("Insight: 4-cylinder engines exhibit highest median efficiency (~28 MPG); 8-cylinder drop below 15 MPG.")
 
@@ -327,7 +328,7 @@ with tab2:
         yearly_avg = df.groupby("model_year")["mpg"].agg(["mean", "std"]).reset_index()
         fig_year = px.line(
             yearly_avg, x="model_year", y="mean", markers=True,
-            color_discrete_sequence=[CLR_HIGHLIGHT],
+            color_discrete_sequence=[CLR_ACCENT],
             labels={"model_year": "Model Year (1970–1982)", "mean": "Average MPG"}
         )
         fig_year.add_scatter(
@@ -336,10 +337,10 @@ with tab2:
         )
         fig_year.add_scatter(
             x=yearly_avg["model_year"], y=yearly_avg["mean"] - yearly_avg["std"],
-            mode='lines', line=dict(width=0), fill='tonexty', fillcolor='rgba(34, 197, 94, 0.15)',
+            mode='lines', line=dict(width=0), fill='tonexty', fillcolor='rgba(88, 199, 133, 0.15)',
             name='±1 Std Dev'
         )
-        apply_forest_layout(fig_year, height=320)
+        apply_eucalyptus_layout(fig_year, height=320)
         st.plotly_chart(fig_year, use_container_width=True)
         st.caption("Insight: Noticeable upward trajectory post-1973 oil crisis and US CAFE standards.")
 
@@ -349,7 +350,7 @@ with tab3:
 
     st.markdown(f"**Execution Mode:** `{engine_mode}` | **Best Model:** `{metrics.get('best_model', 'Random Forest')}` | **Partitions:** 80% Train ({metrics.get('train_rows', 335)} rows) / 20% Test ({metrics.get('test_rows', 57)} rows)")
 
-    st.markdown("**Model Evaluation Comparison (Primary Accent: Linear Reg. | Highlight: Random Forest)**")
+    st.markdown("**Model Evaluation Comparison (Deep Pine: Linear Reg. | Accent: Random Forest)**")
     m_dict = metrics.get("models", {})
     comp_df = pd.DataFrame(m_dict).T.reset_index().rename(columns={"index": "Algorithm"})
     comp_df["RMSE"] = comp_df["RMSE"].round(3)
@@ -358,34 +359,33 @@ with tab3:
     
     st.dataframe(comp_df, use_container_width=True)
 
-    # Primary accent (#14532D) and Highlight (#22C55E)
     c_b1, c_b2, c_b3 = st.columns(3)
     with c_b1:
         fig_rmse = px.bar(
             comp_df, x="Algorithm", y="RMSE", text="RMSE",
             color="Algorithm",
-            color_discrete_map={"Linear Regression": CLR_PRIMARY, "Random Forest": CLR_HIGHLIGHT},
+            color_discrete_map={"Linear Regression": CLR_ACCENT_DARK, "Random Forest": CLR_ACCENT},
             title="RMSE (Lower is Better)"
         )
-        apply_forest_layout(fig_rmse, height=280)
+        apply_eucalyptus_layout(fig_rmse, height=280)
         st.plotly_chart(fig_rmse, use_container_width=True)
     with c_b2:
         fig_mae = px.bar(
             comp_df, x="Algorithm", y="MAE", text="MAE",
             color="Algorithm",
-            color_discrete_map={"Linear Regression": CLR_PRIMARY, "Random Forest": CLR_HIGHLIGHT},
+            color_discrete_map={"Linear Regression": CLR_ACCENT_DARK, "Random Forest": CLR_ACCENT},
             title="MAE (Lower is Better)"
         )
-        apply_forest_layout(fig_mae, height=280)
+        apply_eucalyptus_layout(fig_mae, height=280)
         st.plotly_chart(fig_mae, use_container_width=True)
     with c_b3:
         fig_r2 = px.bar(
             comp_df, x="Algorithm", y="R2", text="R2",
             color="Algorithm",
-            color_discrete_map={"Linear Regression": CLR_PRIMARY, "Random Forest": CLR_HIGHLIGHT},
+            color_discrete_map={"Linear Regression": CLR_ACCENT_DARK, "Random Forest": CLR_ACCENT},
             title="R² Score (Higher is Better)"
         )
-        apply_forest_layout(fig_r2, height=280)
+        apply_eucalyptus_layout(fig_r2, height=280)
         st.plotly_chart(fig_r2, use_container_width=True)
 
     st.markdown("---")
@@ -402,9 +402,9 @@ with tab3:
             fig_imp = px.bar(
                 rf_fdf, x="Importance", y="Feature", orientation="h",
                 title="Random Forest Feature Importance",
-                color_discrete_sequence=[CLR_HIGHLIGHT]
+                color_discrete_sequence=[CLR_ACCENT]
             )
-            apply_forest_layout(fig_imp, height=300)
+            apply_eucalyptus_layout(fig_imp, height=300)
             st.plotly_chart(fig_imp, use_container_width=True)
     
     with col_feat2:
@@ -413,12 +413,12 @@ with tab3:
             fig_coef = px.bar(
                 lr_cdf, x="Coefficient", y="Feature", orientation="h",
                 title="Linear Regression Coefficients",
-                color_discrete_sequence=["#16A34A"]
+                color_discrete_sequence=[CLR_ACCENT_LIGHT]
             )
-            apply_forest_layout(fig_coef, height=300)
+            apply_eucalyptus_layout(fig_coef, height=300)
             st.plotly_chart(fig_coef, use_container_width=True)
 
-    # Actual vs Predicted in Highlight
+    # Actual vs Predicted in Accent
     st.markdown("**Actual vs. Predicted MPG (Test Partition)**")
     test_samples = details.get("Random Forest", {}).get("sample_predictions", [])
     if test_samples:
@@ -426,7 +426,7 @@ with tab3:
         fig_pred = px.scatter(
             test_pred_df, x="mpg", y="prediction", hover_data=["car_name"],
             labels={"mpg": "Actual MPG", "prediction": "Predicted MPG"},
-            color_discrete_sequence=[CLR_HIGHLIGHT]
+            color_discrete_sequence=[CLR_ACCENT]
         )
         min_val = min(test_pred_df["mpg"].min(), test_pred_df["prediction"].min())
         max_val = max(test_pred_df["mpg"].max(), test_pred_df["prediction"].max())
@@ -434,7 +434,7 @@ with tab3:
             type="line", x0=min_val, y0=min_val, x1=max_val, y1=max_val,
             line=dict(color=CLR_TEXT, dash="dash", width=1.5)
         )
-        apply_forest_layout(fig_pred, height=340)
+        apply_eucalyptus_layout(fig_pred, height=340)
         st.plotly_chart(fig_pred, use_container_width=True)
 
 # ----------------- SECTION 4: FUEL EFFICIENCY PREDICTOR -----------------
@@ -504,15 +504,15 @@ with tab4:
             fig_gauge = go.Figure(go.Indicator(
                 mode="gauge+number",
                 value=prediction_val,
-                title={'text': "Predicted Mileage (MPG)", 'font': {'color': CLR_HIGHLIGHT}},
-                number={'font': {'color': CLR_HIGHLIGHT, 'size': 44}},
+                title={'text': "Predicted Mileage (MPG)", 'font': {'color': CLR_ACCENT}},
+                number={'font': {'color': CLR_ACCENT, 'size': 44}},
                 gauge={
                     'axis': {'range': [0, 50], 'tickcolor': CLR_MUTED},
-                    'bar': {'color': CLR_HIGHLIGHT},
+                    'bar': {'color': CLR_ACCENT},
                     'steps': [
-                        {'range': [0, 18], 'color': "#161D16"},
+                        {'range': [0, 18], 'color': "#23322D"},
                         {'range': [18, 28], 'color': CLR_CARDS},
-                        {'range': [28, 50], 'color': CLR_PRIMARY}
+                        {'range': [28, 50], 'color': "#435C53"}
                     ],
                     'threshold': {
                         'line': {'color': CLR_TEXT, 'width': 3},
@@ -521,17 +521,17 @@ with tab4:
                     }
                 }
             ))
-            apply_forest_layout(fig_gauge, height=260)
+            apply_eucalyptus_layout(fig_gauge, height=260)
             st.plotly_chart(fig_gauge, use_container_width=True)
 
         with res_col2:
-            st.markdown(f'<div style="background-color: {CLR_CARDS}; border: 1px solid {CLR_HIGHLIGHT}; border-radius: 8px; padding: 18px; margin-top: 10px; box-shadow: 0 0 12px rgba(34, 197, 94, 0.15);"><h2 style="color: {CLR_HIGHLIGHT}; margin: 0; font-size: 2.2rem;">{prediction_val:.2f} MPG</h2><p style="color: {CLR_MUTED}; margin: 4px 0 0 0;">Spark MLlib Distributed Prediction</p></div>', unsafe_allow_html=True)
+            st.markdown(f'<div style="background-color: {CLR_CARDS}; border: 1px solid {CLR_ACCENT}; border-radius: 8px; padding: 18px; margin-top: 10px; box-shadow: 0 0 12px rgba(88, 199, 133, 0.15);"><h2 style="color: {CLR_ACCENT}; margin: 0; font-size: 2.2rem;">{prediction_val:.2f} MPG</h2><p style="color: {CLR_MUTED}; margin: 4px 0 0 0;">Spark MLlib Distributed Prediction</p></div>', unsafe_allow_html=True)
             
             # Fuel Efficiency Classification
             if prediction_val >= 28.0:
-                st.markdown(f'<p style="color: {CLR_HIGHLIGHT}; font-weight: 600; margin-top: 12px;">🌿 High Fuel Efficiency — Outstanding fuel economy for this vehicular class.</p>', unsafe_allow_html=True)
+                st.markdown(f'<p style="color: {CLR_ACCENT}; font-weight: 600; margin-top: 12px;">🌿 High Fuel Efficiency — Outstanding fuel economy for this vehicular class.</p>', unsafe_allow_html=True)
             elif prediction_val >= 20.0:
-                st.markdown(f'<p style="color: #4ADE80; font-weight: 600; margin-top: 12px;">🚗 Moderate Fuel Efficiency — Balanced commuter consumption.</p>', unsafe_allow_html=True)
+                st.markdown(f'<p style="color: {CLR_ACCENT_LIGHT}; font-weight: 600; margin-top: 12px;">🚗 Moderate Fuel Efficiency — Balanced commuter consumption.</p>', unsafe_allow_html=True)
             else:
                 st.markdown('<p style="color: #F87171; font-weight: 600; margin-top: 12px;">⚠️ Low Fuel Efficiency — High fuel consumption characteristic of heavy or large-displacement engines.</p>', unsafe_allow_html=True)
 
